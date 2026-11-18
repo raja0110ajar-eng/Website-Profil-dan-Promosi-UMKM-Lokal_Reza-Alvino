@@ -1,6 +1,3 @@
-/* ==========================================================
-   UTILITAS
-   ========================================================== */
 var kurangGerak = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function bacaStorage(kunci) {
@@ -21,9 +18,6 @@ function dua(n) {
   return n < 10 ? '0' + n : '' + n;
 }
 
-/* ==========================================================
-   1. MENU HAMBURGER
-   ========================================================== */
 var tombolMenu = document.getElementById('tombol-menu');
 var menuUtama = document.getElementById('menu-utama');
 
@@ -56,9 +50,6 @@ window.addEventListener('resize', function () {
   }
 });
 
-/* ==========================================================
-   2. DARK MODE / LIGHT MODE (localStorage)
-   ========================================================== */
 var tombolTema = document.getElementById('tombol-tema');
 var ikonTema = document.getElementById('ikon-tema');
 
@@ -82,9 +73,6 @@ tombolTema.addEventListener('click', function () {
   tulisStorage('klr_tema', baru);
 });
 
-/* ==========================================================
-   3. ANIMASI SCROLL
-   ========================================================== */
 var elemenReveal = document.querySelectorAll(
   '.hero-teks, .hero-gambar, .tentang-gambar, .tentang-teks, .judul-section, .cari-wadah, ' +
   '.kartu, .sub-judul, .galeri-filter, .galeri-area, .faq-item, .kontak-info, .form-kartu'
@@ -106,9 +94,6 @@ if ('IntersectionObserver' in window && !kurangGerak) {
   });
 }
 
-/* ==========================================================
-   4. JAM DIGITAL + SAPAAN DINAMIS + TOAST
-   ========================================================== */
 var elJam = document.getElementById('jam');
 var elSapaan = document.getElementById('sapaan');
 var toast = document.getElementById('toast');
@@ -145,9 +130,6 @@ perbaruiJam();
 setInterval(perbaruiJam, 1000);
 tampilToast(sapaanWaktu(new Date().getHours()) + '! Selamat datang di Klaten Rasa_Reza.');
 
-/* ==========================================================
-   5. PENGHITUNG PENGUNJUNG SIMULASI (localStorage)
-   ========================================================== */
 var elPengunjung = document.getElementById('pengunjung');
 var dasarPengunjung = 1200;
 var jumlahPengunjung = parseInt(bacaStorage('klr_pengunjung'), 10);
@@ -159,18 +141,12 @@ jumlahPengunjung += 1;
 tulisStorage('klr_pengunjung', String(jumlahPengunjung));
 elPengunjung.textContent = jumlahPengunjung.toLocaleString('id-ID');
 
-/* ==========================================================
-   6. TOMBOL PESAN (kode lama)
-   ========================================================== */
 document.querySelectorAll('[data-produk]').forEach(function (tombol) {
   tombol.addEventListener('click', function () {
     document.getElementById('pilihan').value = tombol.dataset.produk;
   });
 });
 
-/* ==========================================================
-   7. PENCARIAN PRODUK
-   ========================================================== */
 var inputCari = document.getElementById('cari-produk');
 var pesanKosong = document.getElementById('cari-kosong');
 var grupUnggulan = document.querySelector('.unggulan');
@@ -207,9 +183,6 @@ function cariProduk() {
 
 inputCari.addEventListener('input', cariProduk);
 
-/* ==========================================================
-   8. GALERI: slider (kode lama) + filter + lightbox
-   ========================================================== */
 var galeri = document.getElementById('galeri-geser');
 var semuaFoto = galeri.querySelectorAll('img');
 var fotos = Array.prototype.slice.call(semuaFoto);
@@ -355,9 +328,6 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-/* ==========================================================
-   9. FAQ AKORDEON
-   ========================================================== */
 document.querySelectorAll('.faq-tanya').forEach(function (tombol) {
   tombol.addEventListener('click', function () {
     var item = tombol.parentElement;
@@ -367,9 +337,6 @@ document.querySelectorAll('.faq-tanya').forEach(function (tombol) {
   });
 });
 
-/* ==========================================================
-   10. RATING BINTANG (localStorage)
-   ========================================================== */
 var bintang = document.querySelectorAll('.bintang');
 var wadahRating = document.getElementById('rating');
 var infoRating = document.getElementById('rating-info');
@@ -414,9 +381,6 @@ wadahRating.addEventListener('mouseleave', function () {
 gambarBintang(ratingTersimpan);
 perbaruiInfoRating();
 
-/* ==========================================================
-   11. VALIDASI FORMULIR
-   ========================================================== */
 var form = document.getElementById('form-kontak');
 var pesanOk = document.getElementById('pesan-ok');
 var pesanGalat = document.getElementById('pesan-galat');
@@ -487,9 +451,6 @@ form.addEventListener('submit', function (e) {
   form.reset();
 });
 
-/* ==========================================================
-   12. TOMBOL KEMBALI KE ATAS
-   ========================================================== */
 var tombolAtas = document.getElementById('ke-atas');
 
 function cekScroll() {
