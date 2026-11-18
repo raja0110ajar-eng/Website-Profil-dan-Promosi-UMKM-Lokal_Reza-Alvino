@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klaten Rasa_Reza - UMKM Kuliner Lokal</title>
+  <link rel="icon" type="image/jpeg" href="images/Logo.jpg">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('klr_tema') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (err) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-isi">
+    <a href="#home" class="logo"><img src="images/Logo.jpg" alt="Logo Klaten Rasa">Klaten <span>Rasa</span></a>
+    <nav id="menu-utama" aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+    <div class="header-aksi">
+      <button class="tema-btn" id="tombol-tema" type="button" aria-label="Ganti ke mode gelap" aria-pressed="false"><span id="ikon-tema" aria-hidden="true">&#127769;</span></button>
+      <button class="hamburger" id="tombol-menu" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-utama"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <div class="wadah hero-isi">
+    <div class="hero-teks">
+      <h1>Nikmati Cita Rasa Khas Klaten, Warisan Rasa dari Kota Seribu Umbul</h1>
+      <p>Klaten Rasa menghadirkan berbagai produk kuliner lokal dengan cita rasa khas dan kualitas terbaik. Dari nasi gudangan, soto, hingga jenang ayu, semuanya dibuat segar untuk kamu.</p>
+      <div class="hero-aksi">
+        <a href="#produk" class="btn">Lihat Produk</a>
+        <a href="#kontak" class="btn btn-outline">Hubungi Kami</a>
+      </div>
+    </div>
+    <div class="hero-gambar">
+      <img src="images/Banner.jpg" alt="Banner makanan khas Klaten">
+    </div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-isi">Nasi Gudangan Lethok &bull; Soto &bull; Jenang Ayu &bull; Wajik &bull; Keripik Belut &bull; Peyek Cethul &bull; Geplak &bull; Cita rasa khas Klaten, pesan sekarang!</div>
+</div>
+
+<div class="info-strip">
+  <div class="wadah info-isi">
+    <p class="info-sapaan" id="sapaan">Selamat datang di Klaten Rasa.</p>
+    <p>Waktu kamu: <strong id="jam">--:--:--</strong></p>
+    <p>Pengunjung: <strong id="pengunjung">0</strong></p>
+  </div>
+</div>
+
+<section id="tentang">
+  <div class="wadah tentang-isi">
+    <div class="tentang-gambar">
+      <img src="images/Logo.jpg" alt="Logo Klaten Rasa">
+    </div>
+    <article class="tentang-teks">
+      <h2>Tentang Klaten Rasa_Reza</h2>
+      <p>Klaten Rasa adalah UMKM yang mengembangkan berbagai produk kuliner lokal dengan mengutamakan cita rasa, kualitas bahan, dan kreativitas dalam pengolahan.</p>
+      <h3>Sejarah Singkat</h3>
+      <p>Berawal dari dapur rumahan di Klaten, usaha ini tumbuh dari kecintaan pada makanan tradisional. Resep warisan keluarga diolah kembali agar bisa dinikmati lebih banyak orang.</p>
+      <h3>Visi</h3>
+      <p>Menjadi UMKM kuliner khas Klaten yang dikenal luas dan dipercaya karena rasa dan kualitasnya.</p>
+      <h3>Misi</h3>
+      <ul>
+        <li>Menjaga cita rasa asli makanan khas Klaten.</li>
+        <li>Memakai bahan segar dari petani dan pasar lokal.</li>
+        <li>Mengemas produk dengan kreatif dan higienis.</li>
+      </ul>
+      <h3>Keunggulan Produk</h3>
+      <ul>
+        <li>Resep tradisional dengan bahan pilihan</li>
+        <li>Dibuat segar tanpa pengawet berlebih</li>
+        <li>Harga terjangkau untuk semua kalangan</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section id="produk" class="bg-tanah">
+  <div class="wadah">
+    <div class="judul-section">
+      <h2>Produk Unggulan</h2>
+      <p>Menu pilihan sedulur, favorit pelanggan Klaten Rasa.</p>
+    </div>
+
+    <div class="cari-wadah">
+      <label for="cari-produk" class="sr-only">Cari produk</label>
+      <input type="search" id="cari-produk" placeholder="Cari produk, misalnya: soto" autocomplete="off">
+    </div>
+    <p class="cari-kosong" id="cari-kosong" role="status" hidden></p>
+
+    <div class="unggulan">
+      <article class="kartu">
+        <img src="images/Produk1.jpg" alt="Nasi Gudangan Lethok">
+        <div class="kartu-isi">
+          <h3>Nasi Gudangan Lethok</h3>
+          <p>Nasi hangat dengan sayuran rebus, kelapa parut berbumbu, dan sambal lethok khas Klaten.</p>
+          <div class="kartu-bawah"><span class="harga">Rp18.000</span><a href="#kontak" class="btn" data-produk="Nasi Gudangan Lethok">Pesan</a></div>
+        </div>
+      </article>
+      <article class="kartu">
+        <img src="images/Produk2.jpg" alt="Soto">
+        <div class="kartu-isi">
+          <h3>Soto</h3>
+          <p>Kuah kuning gurih dengan soun, tauge, dan telur, disajikan hangat.</p>
+          <div class="kartu-bawah"><span class="harga">Rp15.000</span><a href="#kontak" class="btn" data-produk="Soto">Pesan</a></div>
+        </div>
+      </article>
+      <article class="kartu">
+        <img src="images/Produk3.jpg" alt="Jenang Ayu">
+        <div class="kartu-isi">
+          <h3>Jenang Ayu</h3>
+          <p>Jenang manis dalam bungkus daun pisang dengan taburan kelapa parut yang lembut.</p>
+          <div class="kartu-bawah"><span class="harga">Rp20.000</span><a href="#kontak" class="btn" data-produk="Jenang Ayu">Pesan</a></div>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="sub-judul" id="judul-gem">Hidden Gem</h3>
+    <div class="gem-geser">
+      <article class="kartu">
+        <img src="images/Produk4.jpg" alt="Wajik">
+        <div class="kartu-isi">
+          <h3>Wajik</h3>
+          <p>Ketan manis legit dengan gula kelapa, dipotong rapi.</p>
+          <div class="kartu-bawah"><span class="harga">Rp15.000</span><a href="#kontak" class="btn" data-produk="Wajik">Pesan</a></div>
+        </div>
+      </article>
+      <article class="kartu">
+        <img src="images/Produk5.jpg" alt="Keripik Belut">
+        <div class="kartu-isi">
+          <h3>Keripik Belut</h3>
+          <p>Belut goreng renyah berbumbu gurih, cocok untuk camilan.</p>
+          <div class="kartu-bawah"><span class="harga">Rp15.000</span><a href="#kontak" class="btn" data-produk="Keripik Belut">Pesan</a></div>
+        </div>
+      </article>
+      <article class="kartu">
+        <img src="images/Produk6.jpg" alt="Peyek Cethul">
+        <div class="kartu-isi">
+          <h3>Peyek Cethul</h3>
+          <p>Peyek tipis garing dengan isian kacang dan rempah.</p>
+          <div class="kartu-bawah"><span class="harga">Rp10.000</span><a href="#kontak" class="btn" data-produk="Peyek Cethul">Pesan</a></div>
+        </div>
+      </article>
+      <article class="kartu">
+        <img src="images/Produk7.jpg" alt="Geplak">
+        <div class="kartu-isi">
+          <h3>Geplak</h3>
+          <p>Jajanan kelapa manis berwarna-warni, lembut dan wangi.</p>
+          <div class="kartu-bawah"><span class="harga">Rp12.000</span><a href="#kontak" class="btn" data-produk="Geplak">Pesan</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="galeri" class="galeri">
+  <div class="wadah">
+    <div class="judul-section">
+      <h2>Galeri Produk</h2>
+      <p>Geser untuk melihat foto lainnya, klik foto untuk memperbesar.</p>
+    </div>
+    <div class="galeri-filter" id="galeri-filter" role="group" aria-label="Filter kategori galeri">
+      <button class="filter-btn aktif" type="button" data-filter="semua" aria-pressed="true">Semua</button>
+      <button class="filter-btn" type="button" data-filter="makanan-berat" aria-pressed="false">Makanan Berat</button>
+      <button class="filter-btn" type="button" data-filter="jajanan-manis" aria-pressed="false">Jajanan Manis</button>
+      <button class="filter-btn" type="button" data-filter="camilan-gurih" aria-pressed="false">Camilan Gurih</button>
+      <button class="filter-btn" type="button" data-filter="unggulan" aria-pressed="false">Unggulan</button>
+      <button class="filter-btn" type="button" data-filter="hidden-gem" aria-pressed="false">Hidden Gem</button>
+    </div>
+    <div class="galeri-area">
+      <button class="panah panah-kiri" type="button" aria-label="Sebelumnya">&#10094;</button>
+      <div class="galeri-geser" id="galeri-geser">
+        <img src="images/Produk1.jpg" alt="Nasi Gudangan Lethok" data-kategori="makanan-berat unggulan">
+        <img src="images/Produk2.jpg" alt="Soto" data-kategori="makanan-berat unggulan">
+        <img src="images/Produk3.jpg" alt="Jenang Ayu" data-kategori="jajanan-manis unggulan">
+        <img src="images/Produk4.jpg" alt="Wajik" data-kategori="jajanan-manis hidden-gem">
+        <img src="images/Produk5.jpg" alt="Keripik Belut" data-kategori="camilan-gurih hidden-gem">
+        <img src="images/Produk6.jpg" alt="Peyek Cethul" data-kategori="camilan-gurih hidden-gem">
+        <img src="images/Produk7.jpg" alt="Geplak" data-kategori="jajanan-manis hidden-gem">
+        <img src="images/Produk8.jpg" alt="Lemper" data-kategori="jajanan-manis hidden-gem">
+        <img src="images/Produk9.jpg" alt="Gethuk" data-kategori="jajanan-manis hidden-gem">
+        <img src="images/Produk10.jpg" alt="Rengginang" data-kategori="camilan-gurih hidden-gem">
+        <img src="images/Produk11.jpg" alt="Nasi Tiwul" data-kategori="makanan-berat hidden-gem">
+      </div>
+      <button class="panah panah-kanan" type="button" aria-label="Berikutnya">&#10095;</button>
+    </div>
+    <p class="galeri-nama" id="galeri-nama"></p>
+    <div class="galeri-titik" id="galeri-titik"></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wadah">
+    <div class="judul-section">
+      <h2>Pertanyaan yang Sering Ditanyakan</h2>
+      <p>Klik pertanyaan untuk melihat jawabannya.</p>
+    </div>
+    <div class="faq-daftar">
+      <div class="faq-item">
+        <button class="faq-tanya" type="button" id="faq-btn-1" aria-expanded="false" aria-controls="faq-1">Bagaimana cara memesan produk?<span class="faq-ikon" aria-hidden="true"></span></button>
+        <div class="faq-jawab" id="faq-1" role="region" aria-labelledby="faq-btn-1"><div><p>Klik tombol "Pesan" pada produk yang kamu mau, lalu isi form di bagian Kontak. Kamu juga bisa menghubungi kami lewat WhatsApp di 0889-0589-2629.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-tanya" type="button" id="faq-btn-2" aria-expanded="false" aria-controls="faq-2">Jam berapa Klaten Rasa buka?<span class="faq-ikon" aria-hidden="true"></span></button>
+        <div class="faq-jawab" id="faq-2" role="region" aria-labelledby="faq-btn-2"><div><p>Senin sampai Jumat buka pukul 08.00 - 17.00, sedangkan Sabtu dan Minggu buka pukul 07.00 - 20.00.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-tanya" type="button" id="faq-btn-3" aria-expanded="false" aria-controls="faq-3">Apakah produknya dibuat segar?<span class="faq-ikon" aria-hidden="true"></span></button>
+        <div class="faq-jawab" id="faq-3" role="region" aria-labelledby="faq-btn-3"><div><p>Ya. Semua produk dibuat segar dengan bahan dari petani dan pasar lokal, tanpa pengawet berlebih.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-tanya" type="button" id="faq-btn-4" aria-expanded="false" aria-controls="faq-4">Di mana lokasi Klaten Rasa?<span class="faq-ikon" aria-hidden="true"></span></button>
+        <div class="faq-jawab" id="faq-4" role="region" aria-labelledby="faq-btn-4"><div><p>Kami berada di Jl. Senden No. 27, Klaten.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontak" class="bg-tanah">
+  <div class="wadah kontak-isi">
+    <div class="kontak-info">
+      <h2>Hubungi Kami</h2>
+      <p>Mau pesan atau bertanya? Hubungi kami lewat kontak di bawah atau isi form di samping.</p>
+      <ul>
+        <li><strong>Alamat</strong>Jl. Senden No. 27, Klaten</li>
+        <li><strong>Telepon</strong>0889-0589-2629</li>
+        <li><strong>WhatsApp</strong>0889-0589-2629</li>
+        <li><strong>Email</strong>klatenrasa.reza@email.com</li>
+        <li><strong>Instagram</strong>@klatenrasa.reza</li>
+      </ul>
+      <div class="tabel-bungkus">
+        <table>
+          <tr><th>Hari</th><th>Jam Buka</th></tr>
+          <tr><td>Senin - Jumat</td><td>08.00 - 17.00</td></tr>
+          <tr><td>Sabtu - Minggu</td><td>07.00 - 20.00</td></tr>
+        </table>
+      </div>
+
+      <div class="rating-kartu">
+        <h3>Beri Penilaian</h3>
+        <div class="rating-bintang" id="rating" role="group" aria-label="Rating Klaten Rasa">
+          <button class="bintang" type="button" aria-label="Beri 1 bintang" aria-pressed="false">&#9733;</button>
+          <button class="bintang" type="button" aria-label="Beri 2 bintang" aria-pressed="false">&#9733;</button>
+          <button class="bintang" type="button" aria-label="Beri 3 bintang" aria-pressed="false">&#9733;</button>
+          <button class="bintang" type="button" aria-label="Beri 4 bintang" aria-pressed="false">&#9733;</button>
+          <button class="bintang" type="button" aria-label="Beri 5 bintang" aria-pressed="false">&#9733;</button>
+        </div>
+        <p class="rating-info" id="rating-info" aria-live="polite">Klik bintang untuk memberi penilaian.</p>
+      </div>
+    </div>
+
+    <form class="form-kartu" id="form-kontak" novalidate>
+      <h3>Kirim Pesan</h3>
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required aria-describedby="galat-nama">
+      <small class="galat" id="galat-nama"></small>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="nama@email.com" required aria-describedby="galat-email">
+      <small class="galat" id="galat-email"></small>
+      <label for="hp">Nomor HP</label>
+      <input type="tel" id="hp" name="hp" placeholder="08xx-xxxx-xxxx" required aria-describedby="galat-hp">
+      <small class="galat" id="galat-hp"></small>
+      <label for="pilihan">Pilihan Produk</label>
+      <select id="pilihan" name="pilihan">
+        <option>Nasi Gudangan Lethok</option>
+        <option>Soto</option>
+        <option>Jenang Ayu</option>
+        <option>Wajik</option>
+        <option>Keripik Belut</option>
+        <option>Peyek Cethul</option>
+        <option>Geplak</option>
+      </select>
+      <label for="pesan">Pesan</label>
+      <textarea id="pesan" name="pesan" placeholder="Tulis pesanmu"></textarea>
+      <button type="submit" class="btn">Kirim</button>
+      <p class="pesan-galat" id="pesan-galat" role="alert">Formulir belum lengkap. Periksa kolom yang ditandai merah.</p>
+      <p class="pesan-ok" id="pesan-ok" role="status">Formulir berhasil divalidasi. Terima kasih, pesanmu sudah kami terima.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-isi">
+    <div>
+      <h3>Klaten Rasa_Reza</h3>
+      <p>UMKM kuliner lokal yang menghadirkan makanan khas Klaten dengan cita rasa asli dan bahan pilihan.</p>
+      <p>Jl. Senden No. 27, Klaten</p>
+    </div>
+    <div>
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Kontak dan Media Sosial</h3>
+      <ul>
+        <li>0889-0589-2629</li>
+        <li>klatenrasa.reza@email.com</li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copyright">&copy; 2026 Klaten Rasa_Reza. All Rights Reserved.</p>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau foto" hidden>
+  <button class="lightbox-tutup" id="lightbox-tutup" type="button" aria-label="Tutup pratinjau">&times;</button>
+  <figure class="lightbox-isi">
+    <img id="lightbox-img" alt="">
+    <figcaption id="lightbox-teks"></figcaption>
+  </figure>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <p id="toast-teks"></p>
+  <button type="button" id="toast-tutup" aria-label="Tutup notifikasi">&times;</button>
+</div>
+
+<button class="ke-atas" id="ke-atas" type="button" aria-label="Kembali ke atas">&#8593;</button>
+
+<script src="script.js"></script>
+</body>
+</html>
